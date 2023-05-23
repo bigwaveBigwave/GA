@@ -15,6 +15,7 @@ std::mt19937 gen(rd());
 int node = 0;
 
 // Structure to represent an edge
+
 struct Edge {
     int u, v;
     int weight;
@@ -59,7 +60,7 @@ std::vector<int> geneticAlgorithm(const std::vector<Edge>& edges, int numVertice
             fitness[i] = calculateWeightSum(population[i], edges);
         }
 
-        // Find the best individual in the current population
+        // Find the best individual in the current  population
         auto maxFitness = std::max_element(fitness.begin(), fitness.end());
         int maxFitnessIndex = std::distance(fitness.begin(), maxFitness);
 
