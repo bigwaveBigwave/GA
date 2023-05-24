@@ -93,7 +93,7 @@ std::vector<int> geneticAlgorithm(const std::vector<Edge>& edges, int numVertice
 
             // Perform mutation
             std::uniform_real_distribution<double> randomProbability(0.0, 1.0);
-            double mutationProbability = 0.001;  // Adjust the mutation probability as needed
+            double mutationProbability = 0.01;  // Adjust the mutation probability as needed
             if (randomProbability(gen) < mutationProbability) {
                 int mutationIndex = randomIndex(gen);
                 offspring[i][mutationIndex] = (offspring[i][mutationIndex] == mutationIndex + 1) ? mutationIndex + 1 + numVertices / 2 : mutationIndex + 1;
