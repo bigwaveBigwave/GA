@@ -80,7 +80,7 @@ std::vector<int> geneticAlgorithm(const std::vector<Edge>& edges, int numVertice
         }
 
         // Perform crossover and mutation to create new offspring
-        std::vector<std::vector<int>> offspring(populationSize);
+        std::vector<std::vector<int>> offspring(populationSize); 
         for (int i = 0; i < populationSize; i += 2) {
             std::uniform_real_distribution<int> randomIndex(0, numVertices / 2 - 1);
             // Perform crossover
